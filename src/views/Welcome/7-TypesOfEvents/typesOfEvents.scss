@@ -1,0 +1,216 @@
+@import "/src/styles/variables.scss";
+@import "/src/styles/fonts.scss";
+
+.section-types-of-events {
+    position: relative;
+    .section-top {
+        text-align: center;
+        position: relative;
+        margin-bottom: 20px;
+        @include adapted-content-mobile{
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+        }
+        img{
+            width: 100%;
+        }
+        h2{
+            margin-bottom: 3vw;
+            @include family-Menseal-Bold;
+            @include adapted-content-web{
+                padding-inline: 18vw;
+                font-size: $fz-48;
+            }
+            @include adapted-content-mobile{
+                font-size: $fz-24 * $mobile-size;
+                padding-inline: 10vw;
+            }
+        }
+        .icon-xs{
+            transform: rotate(180deg);
+            @include adapted-content-web{
+                width: 10vw;
+                top: 22vw;
+                left: 3vw;
+                position: absolute;
+            }
+            @include adapted-content-mobile{
+                width: 30vw;
+                margin-left: -3vw;
+                margin-block: 5vw;
+            }
+        }
+    }
+
+    .carousel-wrapper {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        z-index: 1;
+        @include adapted-content-web{
+            width: 120vw;
+        }
+        @include adapted-content-mobile{
+            width: 140vw;
+        }
+
+        .carousel {
+            display: flex;
+            justify-content: center;
+            transition: transform 0.3s ease;
+            width: auto;
+            .card {
+                background-color: transparent;
+                border-radius: 10px;
+                transition: transform 0.3s ease, height 0.3s ease;
+                @include adapted-content-web{
+                    width: 20.833vw;
+                }
+                @include adapted-content-mobile{
+                    width: 42.239vw;
+                }
+    
+                .bg-img-card-styles {
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    width: 100%;
+                    @include adapted-content-web{
+                        height: 20vw;
+                    }
+                    @include adapted-content-mobile{
+                        height: 42.239vw;
+                    }
+                }
+                @include adapted-content-web{
+                    h3 {
+                        margin-top: 1vw;
+                        text-align: left;
+                        font-size: $fz-30;
+                        color: #fff;
+                        padding-left: 1vw;
+                        @include family-Menseal-Bold;
+                    }
+                }
+                &.active {
+                    @include adapted-content-web{
+                        width: 26.042vw;
+                    }
+                    @include adapted-content-mobile{
+                        width: 60.814vw;
+                    }
+                    .bg-img-card-styles {
+                        @include adapted-content-web{
+                            height: 31.25vw;
+                        }
+                        @include adapted-content-mobile{
+                            height: 73.028vw;
+                        }
+                    }
+                    h3 {
+                        margin-top: 1vw;
+                        color: #fff;
+                        padding-left: 0vw;
+                        @include family-Menseal-Bold;
+                        @include adapted-content-web{
+                            font-size: $fz-50;
+                            text-align: left;
+                            line-height: 2.604vw;
+                            
+                        }
+                        @include adapted-content-mobile{
+                            font-size: $fz-19 * $mobile-size;
+                            text-align: center;
+                            margin-top: 10vw;
+                        }
+                    }
+                    @include adapted-content-web{
+                        p {
+                            color: #fff;
+                            font-size: $fz-22;
+                            text-align: left;
+                            margin-bottom: 2vw;
+                            @include family-HelveticaNowText-Light;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .section-points{
+        .points-1{
+            position: absolute;
+            @include adapted-content-web{
+                right: 5vw;
+                top: 60vw;
+            }
+            @include adapted-content-mobile{
+                top: 91vw;
+                right: 0;
+            }
+        }
+        @include adapted-content-web{
+            .points-2{
+                top: 30vw;
+                z-index: 0;
+                left: 5vw;
+                position: absolute;
+            }
+        }
+    }
+    .carousel-buttons {
+        .carousel-control {
+            position: absolute;
+            background: none;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            width: auto;
+            z-index: 2;
+            @include adapted-content-web{
+                top: 65vw;
+
+            }
+            @include adapted-content-mobile{
+                top: 190vw;
+            }
+
+            
+            &.prev {
+                transform: rotateY(180deg);
+                @include adapted-content-web{
+                    left: 30vw;
+                }
+                @include adapted-content-mobile{
+                    left: 5vw;
+                }
+            }
+            
+            &.next {
+                @include adapted-content-web{
+                    right: 30vw;
+                }
+                @include adapted-content-mobile{
+                    right: 5vw;
+                }
+            }
+        }
+    }
+    @include adapted-content-mobile{
+        .button-contact{
+            margin-top: 10vw;
+            width: 80vw;
+            height: 16.031vw;
+            margin-inline: 10vw;
+            border: none;
+            color: #fff;
+            border-radius: 20px;
+            font-size: $fz-18 * $mobile-size;
+            background-image: linear-gradient(90deg, #E717AA 0%, #5243AE 70%, #320E54 100%);
+            @include family-Kento-Regular;
+        }
+    }
+}

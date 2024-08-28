@@ -1,0 +1,86 @@
+@import "/src/styles/variables.scss";
+@import "/src/styles/fonts.scss";
+
+.section-how-do-we-do-it {
+    margin-top: 7vw;
+    .container-video {
+        @include adapted-content-web{
+            position: relative;
+            overflow: hidden;
+            z-index: 0;
+            aspect-ratio: 3.555555556;
+            
+            video {
+                width: 100vw;
+            }
+        }
+
+        img {
+            @include adapted-content-web{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            width: 100vw;
+        }
+        .icon-x{
+            @include adapted-content-web{
+                position: absolute;
+            }
+            @include adapted-content-mobile{
+                margin-top: 3vw;
+            }
+            &-1{
+                aspect-ratio: 4.971428571;
+                @include adapted-content-web{
+                    width: 9.063vw;
+                    top: 6vw;
+                    left: 96vw;
+                }
+                @include adapted-content-mobile{
+                    width: 44.275vw;
+                    margin-left: 60vw;
+                }
+            }
+            @include adapted-content-web{
+                &-2{
+                    width: 9.063vw;
+                    aspect-ratio: 4.971428571;
+                    top: 16vw;
+                    transform: rotate(180deg);
+                    left: -1vw;
+                }
+            }
+        }
+    }
+    .cards-how-do-we-do-it{
+        display: flex;
+        margin-inline: 7vw;
+        @include adapted-content-web{
+            z-index: 1;
+            position: relative;
+            justify-content: space-between;
+        }
+        @include adapted-content-mobile{
+            justify-content: center;
+        }
+        .card-container{
+            @include adapted-content-mobile{
+                margin-bottom: 10vw;
+            }
+            @include adapted-content-web{
+                margin-bottom: 2vw;
+                &-1{
+                 margin-top: -7vw;
+                }
+                &-2{
+                 margin-top: -2vw;
+                }
+                &-3{
+                 margin-top: 2vw;
+                }
+            }
+        }
+    }
+}

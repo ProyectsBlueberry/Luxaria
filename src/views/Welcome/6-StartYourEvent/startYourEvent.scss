@@ -1,0 +1,110 @@
+@import "/src/styles/variables.scss";
+@import "/src/styles/fonts.scss";
+
+.section-start-your-event{
+    background-image: url('/public/img/imgs/start-your-event.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 5vw;
+    display: flex;
+    align-items: center;
+    @include adapted-content-web{
+        justify-content: center;
+        height: 21.159vw;
+    }
+    @include adapted-content-mobile{
+        flex-direction: column;
+        padding-block: 10vw;
+    }
+
+    .start-your-event-left{
+        @include adapted-content-web{
+            width: 32vw;
+        }
+        @include adapted-content-mobile{
+            width: 60vw;
+        }
+        h2{
+            @include family-Menseal-Bold;
+            @include adapted-content-web{
+                font-size: $fz-70;
+                line-height: 3.4375vw;
+            }
+            @include adapted-content-mobile{
+                font-size: $fz-30 * $mobile-size;
+                line-height: 7.634vw;
+                text-align: center;
+                margin-bottom: 5vw;
+            }
+        }
+    }
+    .start-your-event-right{
+        @include adapted-content-web{
+            margin-left: 5vw;
+        }
+        @include adapted-content-mobile{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        h3{
+            @include family-HelveticaNowText-Medium;
+            @include adapted-content-web{
+                font-size: $fz-32;
+            }
+            @include adapted-content-mobile{
+                font-size: $fz-27 * $mobile-size;
+                text-align: center;
+                line-height: 7.379vw;
+            }
+        }
+        p{
+            @include family-HelveticaNowText-Light;
+            @include adapted-content-web{
+                width: 80%;
+                font-size: $fz-32;
+            }
+            @include adapted-content-mobile{
+                font-size: $fz-27 * $mobile-size;
+                line-height: 7.379vw;
+                text-align: center;
+                width: 70%;
+            }
+        }
+        .contact-num{
+            display: flex;
+            cursor: pointer;
+            transition: all ease 0.5s;
+            @include adapted-content-mobile{
+                align-items: center;
+                border: 1px solid #fff;
+                border-radius: 10px;
+                padding-block: 3vw;
+                padding-inline: 10vw;
+                margin-top: 5vw;
+            }
+            &:hover{
+                transform: scale(1.1);
+            }
+            img{
+                aspect-ratio: 0.997612890;
+                margin-right: 1vw;
+                @include adapted-content-web{
+                    width: 2.612vw;
+                }
+                @include adapted-content-mobile{
+                    width: 10vw;
+                }
+            }
+            p{
+                font-size: $fz-45;
+                @include family-HelveticaNowText-Medium;
+                @include adapted-content-mobile{
+                    font-size: $fz-24 * $mobile-size;
+                    width: 50vw;
+                }
+            }
+        }
+    }
+}

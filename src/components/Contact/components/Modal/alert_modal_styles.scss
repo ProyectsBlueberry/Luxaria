@@ -1,0 +1,113 @@
+@import "/src/styles/variables.scss";
+@import "/src/styles/fonts.scss";
+@import "/src/styles/colors.scss";
+@import "/src/styles/global.scss";
+
+
+.card_main_container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 20vw;
+   height: 15vw;
+   background-color: #000;
+   border-radius: 15px;
+   padding-bottom: 2vw;
+   padding-top: 2vw;
+
+   @include adapted-content {
+      width: 30vw;
+      height: 20vw;
+   }
+
+   @include adapted-content-mobile {
+      width: 90vw;
+      height: 80vw;
+
+   }
+
+   .content_modal {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      margin: 1vw;
+      text-align: center;
+
+
+      .title_modal {
+         color: #fff;
+         font-size: $fz-30;
+         @include family-HelveticaNowText-Bold;
+         
+         @include adapted-content {
+            font-size: $fz-40;
+            
+         }
+         
+         @include adapted-content-mobile {
+            font-size: $fz-40*$mobile_size;
+         }
+      }
+      
+      .message {
+         margin-top: 0;
+         font-size: $fz-17;
+         color: #fff;
+         @include family-HelveticaNowText-Light;
+
+         @include adapted-content {
+            font-size: $fz-25;
+         }
+
+         @include adapted-content-mobile {
+            font-size: $fz-25*$mobile_size;
+            width: 90%;
+         }
+      }
+      img{
+         width: 5vw;
+      }
+   }
+   &.card_main_container-2{
+      background-color: #fff;
+      .content_modal{
+         p{
+            color: #000;
+         }
+      }
+      .button_label_modal{
+         &:hover{
+            color: #fff;
+            border: #fff 1px solid;
+         }
+      }
+   }
+}
+
+.button_label_modal {
+
+   font-size: $fz-25;
+   background-color: transparent;
+   color: #fff;
+   border: 1px solid #fff;
+   border-radius: 10px;
+   width: 10vw;
+   height: 3vw;
+   cursor: pointer;
+   &:hover{
+      background-color: #fff;
+      border: 1px solid #000;
+      color: #000;
+   }
+   
+   @include adapted-content {
+      font-size: $fz-30;
+
+   }
+
+   @include adapted-content-mobile {
+      font-size: $fz-25*$mobile_size;
+   }
+}

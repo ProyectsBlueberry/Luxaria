@@ -1,0 +1,49 @@
+@import "/src/styles/variables.scss";
+@import "/src/styles/fonts.scss";
+
+.section-unforgettable{
+    position: relative;
+    video{
+        width: 100vw;
+        @include adapted-content-web{
+            aspect-ratio: 1.777777778;
+        }
+        @include adapted-content-mobile{
+
+        }
+    }
+    .body-unforgettable{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2{
+            text-align: center;
+            @include family-Menseal-Bold;
+            @include adapted-content-web{
+                width: 37vw;
+                font-size: $fz-52;
+                line-height: 2.917vw;
+            }
+            @include adapted-content-mobile{
+                font-size: $fz-27 * $mobile-size ;
+                width: 55vw;
+                margin-bottom: 5vw;
+            }
+        }
+        img{
+            @include adapted-content-web{
+                width: 47.708vw;
+                margin-bottom: 3vw;
+                margin-top: 1vw;
+            }
+            @include adapted-content-mobile{
+                width: 81.471vw;
+                margin-bottom: 5vw;
+            }
+        }
+    }
+}

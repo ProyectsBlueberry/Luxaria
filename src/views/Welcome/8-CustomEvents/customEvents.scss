@@ -1,0 +1,132 @@
+@import "/src/styles/variables.scss";
+@import "/src/styles/fonts.scss";
+
+.section-custom-events{
+    margin-top: 5vw;
+    position: relative;
+    .section-top{
+        padding-block: 7vw;
+        display: flex;
+        justify-content: center;
+        @include adapted-content-web{
+            background-image: url('/public/img/backgrounds/bg-custom-events.webp');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        img{
+            width: 85.401vw;
+        }
+    }
+    .section-bottom{
+        padding-top: 5vw;
+        display: flex;
+        position: relative;
+        @include adapted-content-mobile{
+            flex-direction: column;
+        }
+        .section-left {
+            position: relative;
+            margin-inline: 5vw;
+            @include adapted-content-web{
+                width: 32.573vw;
+            }
+            @include adapted-content-mobile{
+                width: 90vw;
+            }
+        
+            .section-static {
+                @include adapted-content-web{
+                    position: -webkit-sticky;
+                    position: sticky;
+                    top: 3vw;
+                }
+                h2 {
+                    @include family-Menseal-Bold;
+                    @include adapted-content-web{
+                        font-size: $fz-57;
+                        line-height: 3.177vw;
+                    }
+                    @include adapted-content-mobile{
+                        text-align: center;
+                        font-size: $fz-24 * $mobile-size;
+                        line-height: 6.616vw;
+                    }
+                }
+                p {
+                    @include family-HelveticaNowText-Light;
+                    @include adapted-content-web{
+                        width: 27vw;
+                        font-size: $fz-22;
+                        margin-bottom: 2vw;
+                    }
+                    @include adapted-content-mobile{
+                        text-align: center;
+                        padding-inline: 1vw;
+                        margin-top: 5vw;
+                        font-size: $fz-15 * $mobile-size;
+                    }
+                }
+            }
+        }
+        .section-right{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+            @include adapted-content-web{
+                width: 49.479vw;
+                // margin-left: 40.573vw;
+            }
+            @include adapted-content-mobile{
+                width: 84vw;
+                margin-top: 5vw;
+                padding-inline: 8vw;
+            }
+            .image{
+                position: relative;
+                img{
+                    width: 100%;
+                    transition: all ease .5s;
+                    position: relative;
+                    z-index: 1;
+                }
+                .before{
+                    position: absolute;
+                    width: 23.698vw;
+                    aspect-ratio: 0.812500000;
+                    z-index: 0;
+                    background-image: linear-gradient(90deg, #E717AA, #887DFF);
+                }
+                @include adapted-content-web{
+                    margin-bottom: 2vw;
+                    width: 23.698vw;
+                    aspect-ratio: 0.812500000;
+                    transition: all ease .5s;
+                    &:hover{
+                        img{
+                            transform: scale(0.98);
+                        }
+                    
+                    }
+                }
+                @include adapted-content-mobile{
+                    width: 26.081vw;
+                    margin-bottom: 3vw;
+                    aspect-ratio: 0.812524772;
+                }
+            }
+        }
+        .absolute-icons{
+            .img-1{
+
+            }
+            .img-2{
+
+            }
+            .img-3{
+
+            }
+        }
+    }
+}

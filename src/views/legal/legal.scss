@@ -1,0 +1,59 @@
+@import '/src/styles/fonts.scss';
+@import '/src/styles/variables.scss';
+
+.legal-cont{
+    padding-inline: 5vw;
+    padding-block: 3vw;
+    color: #fff;
+    @include adapted-content-web{
+        padding-top: 10vw;
+    }
+    @include adapted-content-mobile{
+        padding-top: 20vw;
+    }
+    h1{
+        margin: 0;
+        margin-bottom: 3vw;
+        @include family-HelveticaNowText-Bold;
+        @include adapted-content-web{
+            font-size: $fz-70;
+        }
+        @include adapted-content-mobile{
+            font-size: $fz-70 * 2.5;
+        }
+    }
+    h2{
+        @include family-HelveticaNowText-Bold;
+        @include adapted-content-web{
+            font-size: $fz-40;
+        }
+        @include adapted-content-mobile{
+            font-size: $fz-40 * 2.5;
+        }
+    }
+    p{
+        @include family-HelveticaNowText-Light;
+        @include adapted-content-web{
+            font-size: $fz-25;
+        }
+        @include adapted-content-mobile{
+            font-size: $fz-25 * 2.5;
+        }
+        span{
+            @include family-HelveticaNowText-Bold;
+        }
+    }
+    ul{
+        li{
+            @include family-HelveticaNowText-Light;
+            @include adapted-content-web{
+                font-size: $fz-25;
+            }
+            @include adapted-content-mobile{
+                font-size: $fz-25 * 2.5;
+            }
+            span{@include family-HelveticaNowText-Bold;
+            }
+        }
+    }
+}

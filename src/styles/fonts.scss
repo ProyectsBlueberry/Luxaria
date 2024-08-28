@@ -1,0 +1,157 @@
+// FONT SIZE //
+$fz-9: 0.469vw;
+$fz-11: 0.573vw;
+$fz-12: 0.625vw;
+$fz-13: 0.677vw;
+$fz-14: 0.729vw;
+$fz-15: 0.781vw;
+$fz-16: 0.833vw;
+$fz-17: 0.885vw;
+$fz-18: 0.938vw;
+$fz-19: 0.99vw;
+$fz-20: 1.042vw;
+$fz-21: 1.146vw;
+$fz-22: 1.146vw;
+$fz-23: 1.198vw;
+$fz-24: 1.25vw;
+$fz-25: 1.302vw;
+$fz-26: 1.354vw;
+$fz-27: 1.406vw;
+$fz-28: 1.458vw;
+$fz-29: 1.51vw;
+$fz-30: 1.563vw;
+$fz-31: 1.615vw;
+$fz-32: 1.667vw;
+$fz-33: 1.719vw;
+$fz-34: 1.771vw;
+$fz-35: 1.823vw;
+$fz-36: 1.875vw;
+$fz-38: 1.979vw;
+$fz-40: 2.083vw;
+$fz-41: 2.135vw;
+$fz-42: 2.188vw;
+$fz-43: 2.24vw;
+$fz-45: 2.344vw;
+$fz-46: 2.395833333vw;
+$fz-47: 2.448vw;
+$fz-48: 2.5vw;
+$fz-49: 2.552vw;
+$fz-50: 2.604vw;
+$fz-52: 2.708vw;
+$fz-53: 2.76vw;
+$fz-55: 2.865vw;
+$fz-57: 2.969vw;
+$fz-60: 3.125vw;
+$fz-62: 3.229vw;
+$fz-63: 3.281vw;
+$fz-65: 3.385vw;
+$fz-67: 3.49vw;
+$fz-68: 3.542vw;
+$fz-70: 3.646vw;
+$fz-71: 3.698vw;
+$fz-73: 3.802vw;
+$fz-75: 3.906vw;
+$fz-77: 4.01vw;
+$fz-80: 4.167vw;
+$fz-84: 4.375vw;
+$fz-90: 4.688vw;
+$fz-93: 4.844vw;
+$fz-100: 5.208vw;
+$fz-105: 5.469vw;
+$fz-108: 5.625vw;
+$fz-110: 5.729vw;
+$fz-120: 6.25vw;
+$fz-129: 6.719vw;
+$fz-130: 6.771vw;
+$fz-140: 7.292vw;
+$fz-150: 7.813vw;
+$fz-160: 8.333vw;
+$fz-190: 9.896vw;
+$fz-262: 13.646vw;
+$mobile-size: 4.8848;
+
+//----------------------------------------//
+//----------------------------------------//
+
+// FONT FAMILY //
+
+
+@font-face {
+    font-family: 'Menseal Bold';
+    src: url('/public/fonts/MENSEL/menseal-bold.ttf');
+}
+@mixin family-Menseal-Bold{
+    font-family: 'Menseal Bold';
+}
+@font-face {
+    font-family: 'Kento Regular';
+    src: url('/public/fonts/KENTO/Kento-Regular.ttf');
+}
+@mixin family-Kento-Regular{
+    font-family: 'Kento Regular';
+}
+@font-face {
+    font-family: 'Kento Bold';
+    src: url('/public/fonts/KENTO/Kento-Bold.ttf');
+}
+@mixin family-Kento-Bold{
+    font-family: 'Kento Bold';
+}
+@font-face {
+    font-family: 'HelveticaNowText Regular';
+    src: url('/public/fonts/HelveticaNowText-Regular.ttf');
+}
+@mixin family-HelveticaNowText-Regular {
+    font-family: 'HelveticaNowText Regular';
+}
+
+// fuentes que voy a borrar 
+@font-face {
+    font-family: 'HelveticaNowText Bold';
+    src: url('/public/fonts/HelveticaNowText-Bold.ttf');
+}
+@mixin family-HelveticaNowText-Bold {
+    font-family: 'HelveticaNowText Bold';
+}
+@font-face {
+    font-family: 'HelveticaNowText Light';
+    src: url('/public/fonts/HelveticaNowText-Light.ttf');
+}
+@mixin family-HelveticaNowText-Light {
+    font-family: 'HelveticaNowText Light';
+}
+@font-face {
+    font-family: 'HelveticaNowText Medium';
+    src: url('/public/fonts/HelveticaNowText-Medium.ttf');
+}
+@mixin family-HelveticaNowText-Medium {
+    font-family: 'HelveticaNowText Medium';
+}
+@font-face {
+    font-family: 'NeueMontreal Bold';
+    src: url('/public/fonts/NeueMontreal-Bold.otf');
+}
+@mixin family-NeueMontreal-Bold {
+    font-family: 'NeueMontreal Bold';
+}
+@font-face {
+    font-family: 'NeueMontreal Light';
+    src: url('/public/fonts/NeueMontreal-Light.otf');
+}
+@mixin family-NeueMontreal-Light {
+    font-family: 'NeueMontreal Light';
+}
+@font-face {
+    font-family: 'NeueMontreal Medium';
+    src: url('/public/fonts/NeueMontreal-Medium.otf');
+}
+@mixin family-NeueMontreal-Medium {
+    font-family: 'NeueMontreal Medium';
+}
+@font-face {
+    font-family: 'NeueMontreal Regular';
+    src: url('/public/fonts/NeueMontreal-Regular.otf');
+}
+@mixin family-NeueMontreal-Regular {
+    font-family: 'NeueMontreal Regular';
+}

@@ -1,0 +1,294 @@
+@import '/src/styles/fonts.scss';
+@import '/src/styles/variables.scss';
+
+@include adapted-content-web {
+    .container-header-menu {
+        position: absolute;
+        width: 100vw;
+        background-color: transparent;
+        top: 2.24vw;
+        z-index: 3;
+
+        .container-header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 2.656vw;
+            padding-right: 1.5625vw;
+
+            img {
+                width: 9.28vw;
+                aspect-ratio: 5.552508570;
+            }
+
+            .section-menu {
+                display: flex;
+
+                button.btn-menu {
+                    background-color: transparent;
+                    color: #fff;
+                    border: none;
+                    font-size: $fz-15;
+                    margin-right: 1.51vw;
+                    cursor: pointer;
+                    position: relative;
+                    @include family-Menseal-Bold;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 0;
+                        height: 2px;
+                        background-image: radial-gradient( #EEEEEE 0%, #887DFF 50%, #E717AA 100%);
+                        transition: width 1s ease;
+                    }
+
+                    &:hover::after {
+                        width: 100%;
+                        left: 0;
+                        transition: width 1s ease;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include adapted-content-mobile {
+    #nav-icon2 {
+        position: relative;
+
+        span {
+            display: block;
+            position: absolute;
+            height: 3px;
+            width: 30px;
+            background: #fff;
+            opacity: 1;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+
+            &:nth-child(even) {
+                left: 50%;
+                border-radius: 0 9px 9px 0;
+            }
+
+            &:nth-child(odd) {
+                left: 0px;
+                border-radius: 9px 0 0 9px;
+            }
+
+            &:nth-child(1),
+            &:nth-child(2) {
+                top: 0px;
+            }
+
+            &:nth-child(3),
+            &:nth-child(4) {
+                top: 10px;
+            }
+
+            &:nth-child(5),
+            &:nth-child(6) {
+                top: 20px;
+            }
+
+        }
+        &.open {
+            span{
+                &:nth-child(1),
+                &:nth-child(6) {
+                    transform: rotate(45deg);
+                }
+    
+                &:nth-child(2),
+                &:nth-child(5) {
+                    transform: rotate(-45deg);
+                }
+    
+                &:nth-child(1) {
+                    left: 0px;
+                    top: 7px;
+                }
+    
+                &:nth-child(2) {
+                    left: calc(50% - 5px);
+                    top: 7px;
+                }
+    
+                &:nth-child(3) {
+                    left: -50%;
+                    opacity: 0;
+                }
+    
+                &:nth-child(4) {
+                    left: 100%;
+                    opacity: 0;
+                }
+    
+                &:nth-child(5),
+                &:nth-child(6) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .menu_mobile {
+        position: fixed;
+        z-index: 100;
+        display: none;
+        width: 100vw;
+        height: auto;
+        flex-direction: column;
+        background-color: transparent;
+        top: 0;
+
+        @include adapted-content-mobile {
+            display: block;
+        }
+
+        .logo {
+            width: 100vw;
+            padding-block: 3vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            .logo-img {
+                margin-top: 10vw;
+                width: 45.338vw;
+                aspect-ratio: 5.001038781;
+            }
+
+            .circle {
+                width: 15vw;
+                aspect-ratio: 1;
+                position: absolute;
+                left: 0;
+                display: flex;
+                justify-content: center;
+
+                .mobile-menu-icon {
+                    width: 2vw;
+                    flex-direction: column;
+                    cursor: pointer;
+                    position: absolute;
+                    top: 30%;
+                    left: 30%;
+                    transform: translate(-100%, -50%);
+                    z-index: 99;
+
+                    .bar {
+                        width: 6vw;
+                        height: .8vw;
+                        background-color: #000;
+                        margin: 6px 0;
+
+                        &.bar-1 {
+                            width: 5vw;
+                        }
+
+                        &.bar-2 {
+                            width: 6vw;
+                        }
+
+                        &.bar-3 {
+                            width: 3vw;
+                        }
+                    }
+                }
+            }
+        }
+
+        .body-menu-mobile {
+            overflow-y: scroll;
+            background: #000;
+            min-height: 100vh;
+            max-height: 100vh;
+            left: 0;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            padding-inline: 10%;
+            padding-top: 20vw;
+            align-items: center;
+            top: 0;
+            width: 80%;
+            transition: transform 0.3s ease;
+            transform: translateX(-100%);
+            z-index: 98;
+
+            &.visible {
+                transform: translateX(0%);
+                overflow-x: hidden;
+            }
+
+            .logo-img {
+                width: 45.338vw;
+                aspect-ratio: 5.553415345;
+            }
+
+            ul {
+                list-style: none;
+                padding-left: 0;
+                width: 82.061vw;
+                padding-bottom: 5vw;
+                li {
+                    display: flex;
+                    justify-content: center;
+                    button{
+                        text-decoration: none;
+                        text-transform: capitalize;
+                        font-weight: 100;
+                        border: none;
+                        color: #fff;
+                        background-color: transparent;
+                        font-size: $fz-18 * $mobile-size;
+                        position: relative;
+                        margin-bottom: 5vw;
+                        @include family-Menseal-Bold;
+                        &.cont {
+                            text-align: center;
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                width: 0;
+                                height: 2px;
+                                background-image: linear-gradient( 90deg, #EEEEEE 0%, #887DFF 50%, #E717AA 100%);
+                                transition: width 1s ease;
+                            }
+                            &:hover::after {
+                                width: 100%;
+                                left: 0;
+                                transition: width 1s ease;
+                            }
+                            &.btn-submenu {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                width: 100%;
+                                padding-right: 10vw;
+
+                                img.closed-submenu {
+                                    transform: rotate(180deg);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                img {
+                    margin-top: 3vw;
+                    width: 49.464vw;
+                    aspect-ratio: 2.635382514;
+                }
+            }
+        }
+    }
+}

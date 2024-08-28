@@ -1,0 +1,98 @@
+@import "/src/styles/variables.scss";
+@import "/src/styles/fonts.scss";
+
+.card-component {
+    position: relative;
+    margin-bottom: 3vw;
+    transition: all 0.5s ease;
+    @include adapted-content-web {
+        width: 26.146vw;
+        aspect-ratio: 0.998011928;
+    }
+
+    img {
+        @include adapted-content-web {
+            width: 26.146vw;
+            aspect-ratio: 0.998011928;
+        }
+        @include adapted-content-mobile {
+            width: 100%;
+        }
+    }
+
+    .content-card-component {
+        position: absolute;
+        width: 20vw;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: all ease 0.5s;
+        @include adapted-content-mobile {
+            align-items: flex-start;
+            width: 70vw;
+        }
+
+        h3 {
+            @include family-Menseal-Bold;
+            @include adapted-content-web {
+                font-size: $fz-40;
+                text-align: center;
+            }
+            @include adapted-content-mobile {
+                font-size: $fz-15 * $mobile-size;
+            }
+        }
+
+        .description {
+            @include adapted-content-web {
+                display: none;
+            }
+        }
+
+        p {
+            transition: all ease 0.5s;
+            text-align: left;
+            @include adapted-content-web {
+                font-size: $fz-20;
+                overflow: hidden;
+                height: 0;
+                @include family-HelveticaNowText-Regular;
+            }
+            @include adapted-content-mobile {
+                font-size: $fz-17 * $mobile-size;
+                @include family-HelveticaNowText-Light;
+            }
+        }
+    }
+
+    &:hover {
+        .content-card-component {
+            .description {
+                display: block;
+            }
+            p {
+                height: auto;
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            box-shadow: 0 4px 20px rgba(255, 0, 0, 0.4), 0 6px 30px rgba(0, 0, 255, 0.3); // Sombra de dos colores
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        &::before{
+            opacity: 1;
+        }
+    }
+}

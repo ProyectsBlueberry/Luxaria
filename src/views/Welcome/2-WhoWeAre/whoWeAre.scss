@@ -1,0 +1,114 @@
+@import "/src/styles/variables.scss";
+@import "/src/styles/fonts.scss";
+
+.section-who-we-are {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+
+    .section-top {
+        @include adapted-content-web {
+            position: absolute;
+            top: 3vw;
+            left: 6.979vw;
+            z-index: 1;
+        }
+
+        @include adapted-content-mobile {
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+        }
+
+        img {
+            @include adapted-content-web {
+                width: 69.805vw;
+                aspect-ratio: 3.873583815;
+            }
+
+            @include adapted-content-mobile {
+                width: 81.55vw;
+                aspect-ratio: 2.538534653;
+            }
+        }
+    }
+
+    @include adapted-content-web {
+        .section-left {
+            width: 40.208vw;
+            padding-left: 6.979vw;
+            margin-top: 20vw;
+
+            h2 {
+                font-size: $fz-53;
+                @include family-Menseal-Bold;
+            }
+
+            p {
+                width: 28.588vw;
+                font-size: $fz-20;
+                margin-bottom: 1vw;
+                @include family-HelveticaNowText-Regular;
+            }
+        }
+    }
+
+    .section-right {
+        position: relative;
+        margin-top: 5vw;
+        --grado: 45deg;
+
+        @include adapted-content-web {
+            width: 52.813vw;
+        }
+
+        @include adapted-content-mobile {
+            width: 100vw;
+        }
+
+        .img-shadow {
+            aspect-ratio: 1.099783080;
+            position: relative;
+            display: inline-block;
+
+            @include adapted-content-web {
+                width: 52.813vw;
+            }
+
+            @include adapted-content-mobile {
+                width: 100vw;
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: linear-gradient(var(--grado), #E717AA, #29176F, #E717AA, #887DFF);
+            z-index: -1;
+            filter: blur(15px);
+        }
+        h2{
+            position: absolute;
+            top: 3vw;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            width: 70vw;
+            line-height: 6.361vw;
+            @include family-Menseal-Bold;
+        }
+    }
+    @include adapted-content-mobile{
+        .desc{
+            padding-inline: 6vw;
+            padding-top: 5vw;
+            p{
+                font-size: $fz-17 * $mobile-size;
+                @include family-HelveticaNowText-Light;
+            }
+        }
+    }
+}

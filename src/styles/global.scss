@@ -1,0 +1,57 @@
+@import '../styles/variables.scss';
+@import '../styles/fonts.scss';
+
+
+
+.container_primary {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    align-self: center;
+
+    @include adapted-content {
+        margin-bottom: 4rem;
+    }
+
+    @include adapted-content-mobile {
+        margin-bottom: 5rem;
+    }
+}
+
+.contenedor_cards {
+    display: flex;
+    width: 90vw;
+    align-self: center;
+    flex-basis: calc(33.33%);
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@mixin tramsform-capitalize {
+    text-transform: lowercase;
+
+    &::first-letter {
+        text-transform: uppercase !important;
+    }
+}
+
+@mixin tramsform-uppercase {
+    text-transform: uppercase;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+button{
+    cursor: pointer;
+}
+
+.display_none{
+    display: none;
+}
