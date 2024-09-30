@@ -14,18 +14,18 @@
    border-radius: 15px;
    padding-bottom: 2vw;
    padding-top: 2vw;
-
+   
    @include adapted-content {
       width: 30vw;
       height: 20vw;
    }
-
+   
    @include adapted-content-mobile {
       width: 90vw;
       height: 80vw;
-
+      
    }
-
+   
    .content_modal {
       display: flex;
       flex-direction: column;

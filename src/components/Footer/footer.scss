@@ -64,7 +64,7 @@ footer {
             }
             .social-web{
                 display: flex;
-                justify-content: space-between;
+                justify-content: center;
                 @include adapted-content-web{
                     width: 12.083vw;
                 }

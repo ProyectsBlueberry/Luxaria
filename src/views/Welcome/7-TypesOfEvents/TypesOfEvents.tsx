@@ -5,6 +5,7 @@ import './typesOfEvents.scss';
 import { BtnAnimated } from '../../../components/BtnAnimated/BtnAnimated';
 import useMobile from '../../../hooks/useMobile';
 import { useScrollOrRedirect } from '../../../hooks/useScrollOrRedirect';
+import AnimatorFade from '../../../components/AnimatorFade/AnimatorFade';
 
 export const TypesOfEvents = () => {
     const { t } = useTranslation();
@@ -64,12 +65,12 @@ export const TypesOfEvents = () => {
 
     return (
         <section className='section-types-of-events'>
-            <div className="section-top">
+            <AnimatorFade className="section-top">
                 <img src={isMobile ? text_types_of_events_mobile.url : text_types_of_events.url} alt={text_types_of_events.alt} />
                 <img src={how_do_we_do_it_x_1.url} alt="" className="icon-xs" />
                 <h2>{t('text_types_of_events.subtitle')}</h2>
-            </div>
-            <div className="carousel-wrapper">
+            </AnimatorFade>
+            <AnimatorFade className="carousel-wrapper">
                 <div className="carousel">
                     {cards.map((item, index) => (
                         <div
@@ -100,7 +101,7 @@ export const TypesOfEvents = () => {
                         </div>
                     ))}
                 </div>
-            </div>
+            </AnimatorFade>
             <div className="section-points">
                 <img className='points-1' src={icon_points_1.url} alt={icon_points_1.alt} />
                 {

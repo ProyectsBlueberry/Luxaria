@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import './startYourEvent.scss';
 import { icon_whatsapp_white } from '../../../data/img/img-data';
+import AnimatorFade from '../../../components/AnimatorFade/AnimatorFade';
 
 export const StartYourEvent = () => {
     
@@ -11,17 +12,17 @@ export const StartYourEvent = () => {
 
     return(
         <section className='section-start-your-event' id='start-your-events-id'>
-            <div className='start-your-event-left'>
+            <AnimatorFade className='start-your-event-left'>
                 <h2>{t('start_your_event.title')}</h2>
-            </div>
-            <div className='start-your-event-right'>
+            </AnimatorFade>
+            <AnimatorFade className='start-your-event-right'>
                 <h3>{t('start_your_event.subtitle')}</h3>
                 <p>{t('start_your_event.desc')}</p>
                 <div onClick={() => redirectToExternalLink('https://wa.me/523318987845')} className='contact-num'>
                     <img src={icon_whatsapp_white.url} alt={icon_whatsapp_white.alt} />
                     <p>{t('start_your_event.num')}</p>
                 </div>
-            </div>
+            </AnimatorFade>
         </section>
     );
 }

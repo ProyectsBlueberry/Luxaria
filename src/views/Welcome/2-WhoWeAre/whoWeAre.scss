@@ -21,9 +21,10 @@
         }
 
         img {
+
             @include adapted-content-web {
                 width: 69.805vw;
-                aspect-ratio: 3.873583815;
+                height: auto;
             }
 
             @include adapted-content-mobile {
@@ -37,7 +38,7 @@
         .section-left {
             width: 40.208vw;
             padding-left: 6.979vw;
-            margin-top: 20vw;
+            margin-top: 22vw;
 
             h2 {
                 font-size: $fz-53;
@@ -65,7 +66,7 @@
         @include adapted-content-mobile {
             width: 100vw;
         }
-
+        
         .img-shadow {
             aspect-ratio: 1.099783080;
             position: relative;

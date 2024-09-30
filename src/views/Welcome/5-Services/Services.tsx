@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { service_icon_coint_1, service_icon_coint_2, text_services, text_services_mobile } from '../../../data/img/img-data';
 import './services.scss';
 import useMobile from '../../../hooks/useMobile';
+import AnimatorFade from '../../../components/AnimatorFade/AnimatorFade';
 
 export const Services = () => {
 
@@ -18,40 +19,40 @@ export const Services = () => {
                         <div className='line-animated line-animated-1 '></div>
                     }
                     <div className="card-services card-services-1">
-                        <div className="content-card">
+                        <AnimatorFade className="content-card">
                             <h3>{t('services.cards.card_1.title')}</h3>
                             <p>{t('services.cards.card_1.desc')}</p>
-                        </div>
+                        </AnimatorFade>
                     </div>
                     {
                         isMobile &&
                         <div className='line-animated line-animated-2'></div>
                     }
                     <div className="card-services card-services-2">
-                        <div className="content-card">
+                        <AnimatorFade className="content-card">
                             <h3>{t('services.cards.card_2.title')}</h3>
                             <p>{t('services.cards.card_2.desc')}</p>
-                        </div>
+                        </AnimatorFade>
                     </div>
                     {
                         isMobile &&
                         <div className='line-animated line-animated-1'></div>
                     }
                     <div className="card-services card-services-3">
-                        <div className="content-card">
+                        <AnimatorFade className="content-card">
                             <h3>{t('services.cards.card_3.title')}</h3>
                             <p>{t('services.cards.card_3.desc')}</p>
-                        </div>
+                        </AnimatorFade>
                     </div>
                     {
                         isMobile &&
                         <div className='line-animated line-animated-2'></div>
                     }
                     <div className="card-services card-services-4">
-                        <div className="content-card">
+                        <AnimatorFade className="content-card">
                             <h3>{t('services.cards.card_4.title')}</h3>
                             <p>{t('services.cards.card_4.desc')}</p>
-                        </div>
+                        </AnimatorFade>
                     </div>
                     {
                         isMobile &&

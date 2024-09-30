@@ -1,4 +1,3 @@
-import { useTranslation } from 'react-i18next';
 import './card.scss';
 import AnimatorFade from '../../../../components/AnimatorFade/AnimatorFade';
 
@@ -12,7 +11,6 @@ interface Props {
 }
 
 export const Card = ({img, title, description}:Props) => {
-    const {t} = useTranslation();
     
     return(
         <div className='card-component'>

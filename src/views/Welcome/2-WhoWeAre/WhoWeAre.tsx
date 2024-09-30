@@ -10,6 +10,7 @@ export const WhoWeAre = () => {
     const { isMobile } = useMobile();
     useEffect(() => {
         const imgShadowElement = document.querySelector('.section-right') as HTMLElement;
+        
         let grado = 0;
 
         const animateGradient = () => {

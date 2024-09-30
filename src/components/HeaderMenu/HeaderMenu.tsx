@@ -17,10 +17,6 @@ export const HeaderMenu = ({ type }: Props) => {
     const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
     const { isMobile } = useMobile();
 
-    const redirectToExternalLink = (href: string) => {
-        window.open(href, '_blank');
-    };
-
     return (
         <>
             {
@@ -44,40 +40,40 @@ export const HeaderMenu = ({ type }: Props) => {
                             </div>
 
                             <div className={mobileMenuOpen ? 'body-menu-mobile visible' : 'body-menu-mobile'}>
-                                <img className="logo-img" onClick={() => scrollOrNavigate('/')} src={logo_luxaria.url} alt={logo_luxaria.alt} />
+                                <img className="logo-img" onClick={() => scrollOrNavigate('index-id')} src={logo_luxaria.url} alt={logo_luxaria.alt} />
                                 <ul>
                                     <li>
-                                        <button className="cont" onClick={() => { scrollOrNavigate('/'); setMobileMenuOpen(false); }}>
+                                        <button className="cont" onClick={() => { scrollOrNavigate('index-id'); setMobileMenuOpen(false); }}>
                                             {t('headers.menu.btn1')}
                                         </button>
                                     </li>
                                     <li>
-                                        <button className="cont" onClick={() => { scrollOrNavigate('/'); setMobileMenuOpen(false); }}>
+                                        <button className="cont" onClick={() => { scrollOrNavigate('who-we-are-id'); setMobileMenuOpen(false); }}>
                                             {t('headers.menu.btn2')}
                                         </button>
                                     </li>
                                     <li>
-                                        <button className="cont" onClick={() => { scrollOrNavigate('/'); setMobileMenuOpen(false); }}>
+                                        <button className="cont" onClick={() => { scrollOrNavigate('how-do-we-do-it-id'); setMobileMenuOpen(false); }}>
                                             {t('headers.menu.btn3')}
                                         </button>
                                     </li>
                                     <li>
-                                        <button className="cont" onClick={() => { scrollOrNavigate('/'); setMobileMenuOpen(false); }}>
+                                        <button className="cont" onClick={() => { scrollOrNavigate('services-id'); setMobileMenuOpen(false); }}>
                                             {t('headers.menu.btn4')}
                                         </button>
                                     </li>
                                     <li>
-                                        <button className="cont" onClick={() => { scrollOrNavigate('/'); setMobileMenuOpen(false); }}>
+                                        <button className="cont" onClick={() => { scrollOrNavigate('start-your-events-id'); setMobileMenuOpen(false); }}>
                                             {t('headers.menu.btn5')}
                                         </button>
                                     </li>
                                     <li>
-                                        <button className="cont" onClick={() => { scrollOrNavigate('/'); setMobileMenuOpen(false); }}>
+                                        <button className="cont" onClick={() => { scrollOrNavigate('custom-events-id'); setMobileMenuOpen(false); }}>
                                             {t('headers.menu.btn6')}
                                         </button>
                                     </li>
                                     <li>
-                                        <button className="cont" onClick={() => { scrollOrNavigate('/'); setMobileMenuOpen(false); }}>
+                                        <button className="cont" onClick={() => { scrollOrNavigate('contact-id'); setMobileMenuOpen(false); }}>
                                             {t('headers.menu.btn7')}
                                         </button>
                                     </li>

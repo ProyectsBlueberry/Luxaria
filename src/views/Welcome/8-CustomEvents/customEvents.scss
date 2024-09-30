@@ -89,13 +89,13 @@
                     width: 100%;
                     transition: all ease .5s;
                     position: relative;
-                    z-index: 1;
+                    z-index: 2;
                 }
                 .before{
                     position: absolute;
                     width: 23.698vw;
                     aspect-ratio: 0.812500000;
-                    z-index: 0;
+                    z-index: 1;
                     background-image: linear-gradient(90deg, #E717AA, #887DFF);
                 }
                 @include adapted-content-web{
@@ -118,14 +118,34 @@
             }
         }
         .absolute-icons{
-            .img-1{
-
-            }
-            .img-2{
-
-            }
-            .img-3{
-
+            .img{
+                position: absolute;
+                z-index: 0;
+                &-1{
+                    width: 5.99vw;
+                    left: 35vw;
+                    top: 0vw;
+                }
+                &-2{
+                    width: 9.948vw;
+                    left: 38vw;
+                    top: 40vw;
+                }
+                &-3{
+                    width: 10.521vw;
+                    left: -5.25vw;
+                    top: 60vw;
+                }
+                &-4{
+                    width: 9.948vw;
+                    left: -5.25vw;
+                    top: 100vw;
+                }
+                &-5{
+                    width: 6vw;
+                    right: 5vw;
+                    top: 2.1vw;
+                }
             }
         }
     }

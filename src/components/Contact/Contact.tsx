@@ -208,7 +208,7 @@ export const Contact = () => {
                   <label className='label-textarea' htmlFor={'message'}>Mensaje</label>
                   <div className='textarea_container' style={{ width: '100%' }}>
                      <div className="before"></div>
-                     <textarea  name={'message'} required 
+                     <textarea id='message' name={'message'} required 
                      onChange={handleChange}  
                      value={newForm.message.value}
                      style={{
